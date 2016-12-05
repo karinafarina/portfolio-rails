@@ -3,6 +3,7 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,500,700" rel="stylesheet">	
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" src=".../assets/stylesheets/unslider.css">
   
   <title>Portfolio</title>
   
@@ -11,8 +12,37 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class= "header">
+   
+   <%= link_to "Welcome", root_path %>
 
-<%= yield %>
-
+  	<div class="container">
+    	<h1>Karina Gaulin</h1>
+      	<ul>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+  </div>
+	<div class="main">
+    <div class="container">
+    <%= yield %>
+    </div>
+  </div>
+  <div class="footer">
+      <div class="container">
+   			<a href="https://www.facebook.com/?stype=lo&jlou=AffHN7M5ZJWc9QenxLQ283Y1uf3Pj7rRLYp00-QotR4aA5S8cxIu4s9PplmKcM4pHdxnt-zYMKc-rMYymGwsUUWEPs4rjlQZ8bV7M9RsnJNNmA&smuh=50340&lh=Ac8pajQJWzqENsfu">
+       
+  			<%=image_tag("http://image.flaticon.com/icons/svg/33/33702.svg")%>
+      	</a>
+      </div>
+   </div>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src=".../assets/javascripts/unslider.js"></script> <!-- but with the right path! -->
+    <script>
+		jQuery(document).ready(function($) {
+			$('.banner').unslider();
+		});
+	</script>
 </body>
 </html>
